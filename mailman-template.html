@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <!-- Version: 1.6 -->
-<html lang="en">
+<html lang="de">
   <head>
-    <title><MM-List-Name> Mailing List - Wikimedia</title>
+    <title><MM-List-Name> - Kulturverein Petersburg</title>
     <style>
       html, body {
         height: 100%;
       }
       body {
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
         background: #F0F0F0;
         font-family: 'Open Sans', sans-serif;
         font-size: 13px;
@@ -20,7 +20,7 @@
         padding: 0;
       }
       p, ol, ul {
-        margin-top: 0px;
+        margin-top: 0;
       }
       p {
         line-height: 180%;
@@ -43,7 +43,7 @@
         float: right;
       }
       img.aligncenter {
-        margin: 0px auto;
+        margin: 0 auto;
         margin-top: -25px;
         padding-bottom: 10px;
       }
@@ -51,34 +51,23 @@
         display: none;
       }
 
-/** WRAPPER */
+      /** WRAPPER */
 
       .container {
         width: 1000px;
-        margin: 0px auto;
+        margin: 0 auto;
       }
 
-/** MENU */
+      /** MENU */
 
-      #menu {
-        #float: right;
-        #width: 600px;
-        #height: 99px;
-      }
       #menu ul {
-        #float: right;
         margin-left: -25px;
-        #padding: 40x 0px;
         list-style: none;
         line-height: normal;
       }
-      #menu li {
-        #float: left;
-        #margin-left: 2em;
-      }
       #menu a {
         display: block;
-        padding: 10px 0px;
+        padding: 10px 0;
         letter-spacing: 2px;
         text-decoration: none;
         text-transform: uppercase;
@@ -96,11 +85,11 @@
         text-decoration: underline;
       }
 
-/** PAGE */
+      /** PAGE */
 
       #page {
         overflow: hidden;
-        width: 900px;
+        width: 950px;
         padding: 50px 30px 30px 30px;
         background-color: #FFFFFF;
         border-radius: 10px 10px 10px 10px;
@@ -109,11 +98,11 @@
         margin-bottom: 30px;
       }
 
-/** CONTENT */
+      /** CONTENT */
 
       #content {
         float: right;
-        width: 660px;
+        width: 650px;
       }
       #content #onecolumn {
         padding-bottom: 15px;
@@ -124,12 +113,17 @@
         font-size: 3em;
       }
 
-/** SIDEBAR */
+      /** SIDEBAR */
+
+      .logo {
+        width: 100%;
+        height: auto;
+      }
 
       #sidebar {
         float: left;
-        width: 220px;
-        padding-top: 0px;
+        width: 250px;
+        padding-top: 0;
       }
       #sidebar #sbox1 {
         margin-bottom: 40px;
@@ -142,22 +136,21 @@
         overflow: hidden;
       }
 
-/** FOOTER */
+      /** FOOTER */
 
       #copyright{
         overflow: hidden;
-        width: 900px;
+        width: 950px;
         padding: 50px;
       }
       #copyright p {
         text-align: center;
-        #text-shadow: 1px 1px 1px rgba(0,0,0,1);
       }
       #copyright a {
-      color: #4E4E4E;
+        color: #4E4E4E;
       }
 
-/** BODY */
+      /** BODY */
 
       #two-column {
         padding-top: 30px;
@@ -204,28 +197,28 @@
         <h3><MM-List-Description></h3>
         <p><MM-List-Info></p>
         <ul>
-          <li>Visit the <MM-Archive><MM-List-Name> Archives</MM-Archive>. <MM-Restricted-List-Message></li>
-          <li>Send email to <A HREF="mailto:<MM-Posting-Addr>"><MM-Posting-Addr></A>.</li>
+          <li>Emails für die Liste gehen an <A HREF="mailto:<MM-Posting-Addr>"><MM-Posting-Addr></A>.</li>
+          <li>Besuche das <MM-Archive><MM-List-Name> Archiv</MM-Archive> für alte Nachrichten. <MM-Restricted-List-Message></li>
         </ul>
       </div>
       <div id="two-column">
         <div class="box-content" id="subscribe">
-          <h3 class="title title01">Subscribe</h3>
+          <h3 class="title title01">Abonnieren</h3>
           <MM-Subscribe-Form-Start>
           <table>
-            <tr><td>Your e-mail address:</td><td><MM-Subscribe-Box></td></tr>
-            <tr><td>Your name (optional):</td><td><mm-fullname-box></td></tr>
+            <tr><td>Deine Email Addresse:</td><td><MM-Subscribe-Box></td></tr>
+            <tr><td>Dein Name (optional):</td><td><mm-fullname-box></td></tr>
             <!-- Optional Password Fields (can leave out for public lists as Mailman auto-generates) -->
             <!-- Password reminders can always be requested through web interface -->
             <!-- Most likely only to be used with lists with private archives or subscription lists -->
-            <!-- <tr><td>Password:</td><td><MM-New-Password-Box></td></tr> -->
-            <!-- <tr><td>Confirm Password:</td><td><MM-Confirm-Password></td></tr> -->
+            <tr><td>Passwort:</td><td><MM-New-Password-Box></td></tr>
+            <tr><td>Passwort bestätigen:</td><td><MM-Confirm-Password></td></tr>
             <!-- Part of the multilingual selector below -->
-            <tr><td>Preferred language:</td><td><MM-list-langs></td></tr>
+            <tr><td>Bevorzugte Sprache:</td><td><MM-list-langs></td></tr>
           </table>
           <p><MM-Reminder></p>
-          <p><mm-digest-question-start> Would you like to receive list mail batched in a daily digest? 
-          <MM-Undigest-Radio-Button> No <MM-Digest-Radio-Button>  Yes <mm-digest-question-end></p>
+          <p><mm-digest-question-start>Möchten Sie die Listenmails gebündelt in Form einer täglichen Zusammenfassung (digest) erhalten?
+          <MM-Undigest-Radio-Button> Nein <MM-Digest-Radio-Button>  Ja <mm-digest-question-end></p>
           <!-- MM-List-Subscription-Msg gives extra details about the subscription rules of the list -->
           <!-- This is optional, and will include variations between subscription rules (confirm vs confirm and approve) -->
           <!-- On the majority of lists this can be commented out as subscription rules will simply be confirm -->
@@ -233,13 +226,13 @@
           <p style="text-align: center"><MM-Subscribe-Button><MM-Form-End></p>
         </div>
         <div class="box-content" id="members">
-          <h3 class="title title03">List members</h3>
+          <h3 class="title title03">Abonnentenliste ansehen</h3>
           <!-- MM-Roster-Form gives easy access to the subscribers list from the main list info page -->
           <!-- You can comment the line below out for when you don't need to give access to the subscribers list -->
           <!-- For example for announcement mailing lists or mailing lists with a large number of subscribers  -->
           <p><MM-Roster-Form-Start><MM-Roster-Option><MM-Form-End></p></div>
         <div class="box-content" id="manage">
-          <h3 class="title title04">Change your settings or unsubscribe</h3>
+          <h3 class="title title04">Einstellungen ändern oder austragen</h3>
           <p><MM-Options-Form-Start><MM-Editing-Options><MM-Form-End></p>
         </div>
         <div class="box-content" id="admins">
@@ -248,19 +241,18 @@
         </div>
       </div>
     </div>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Wikimedia_logo_text_RGB.svg/200px-Wikimedia_logo_text_RGB.svg.png" alt="Wikimedia Logo" class="aligncenter"><br />
+  
     <div id="sidebar">
+      <img src="https://freiraum-petersburg.de/wp-content/uploads/2014/11/petersburg_logo.png" alt="Petersburg Logo" class="logo">
       <div id="menu">
         <ul>
-          <li><a href="https://meta.wikimedia.org/wiki/Mailing_lists" >Mailing lists</a></li>
-          <li><a href="https://meta.wikimedia.org/wiki/Wikimedia">About Wikimedia</a></li>
-          <li><a href="https://meta.wikimedia.org/wiki/Special:MyLanguage/Mailing_lists/List_info">Translate page</a>
+          <li><a href="http://freiraum-petersburg.de">Freiraum Petersburg</a></li>
         </ul>
       </div>
       <!-- Optional multilingual selector -->
       <!-- Mailman needs to be restarted to localize this custom template -->
       <!-- http://wiki.list.org/pages/viewpage.action?pageId=4030605 -->
-      <MM-lang-form-start><MM-displang-box> <MM-list-langs><MM-form-end>
+      <!-- <MM-lang-form-start><MM-displang-box> <MM-list-langs><MM-form-end> -->
     </div>
   </div>
   <div id="copyright" class="container">
